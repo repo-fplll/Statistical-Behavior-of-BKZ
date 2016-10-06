@@ -1,0 +1,2 @@
+The file "95.json" is the strategy including preprocessing and pruned bonud functions, produced by strategizer of fplll/fpylll
+The file "launch" is an executable file. User can launch program of BKZ 2.0 by running it.

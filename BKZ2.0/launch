@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo 'Launch'
+
+make -j40
+
+python main.py -n 180 -c 0.25 -l 0 -u 1 -s 1 &
+python main.py -n 180 -c 0.25 -l 1 -u 2 -s 1 &
+python main.py -n 180 -c 0.25 -l 2 -u 3 -s 1 &
+python main.py -n 180 -c 0.25 -l 3 -u 4 -s 1 &
+python main.py -n 180 -c 0.25 -l 4 -u 5 -s 1 &
+python main.py -n 180 -c 0.25 -l 5 -u 6 -s 1 &
+python main.py -n 180 -c 0.25 -l 6 -u 7 -s 1 &
+python main.py -n 180 -c 0.25 -l 7 -u 8 -s 1 &
+python main.py -n 180 -c 0.25 -l 8 -u 9 -s 1 &
+python main.py -n 180 -c 0.25 -l 9 -u 10 -s 1 &
+python main.py -n 180 -c 0.25 -l 10 -u 11 -s 1 &
+python main.py -n 180 -c 0.25 -l 11 -u 12 -s 1 &
+python main.py -n 180 -c 0.25 -l 12 -u 13 -s 1 &
+python main.py -n 180 -c 0.25 -l 13 -u 14 -s 1 &
+python main.py -n 180 -c 0.25 -l 14 -u 15 -s 1 &
+python main.py -n 180 -c 0.25 -l 15 -u 16 -s 1 &
+python main.py -n 180 -c 0.25 -l 16 -u 17 -s 1 &
+python main.py -n 180 -c 0.25 -l 17 -u 18 -s 1 &
+python main.py -n 180 -c 0.25 -l 18 -u 19 -s 1 &
+python main.py -n 180 -c 0.25 -l 19 -u 20 -s 1 &
