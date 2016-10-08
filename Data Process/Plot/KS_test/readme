@@ -1,0 +1,4 @@
+Kolmogorov–Smirnov Test is ran under Matlab.
+
+The function is [h,p,ks2stat] = kstest2(M1,M2,alpha,'unequal'), where M1,M2 are two samples of two distributions, alpha is the significance level(we set it 0.05).
+h = 0 means two distributions pass the KS test.
