@@ -42,7 +42,7 @@ def plot_ht(l_n, l_beta):
     """Plot head and tail."""
     MAX = max(l_n)
     for beta in l_beta:
-        plt.figure(figsize=(8, 5))
+        fig = plt.figure(figsize=(8, 5))
         plt.title("Head and Tail in " + "BKZ_" + str(beta) + " basis", fontsize=20)
         i = 0
         for n in l_n:
@@ -64,7 +64,7 @@ def plot_ht(l_n, l_beta):
                     t_Std += [float(data[1])]
                 cnt += 1
             plt.plot(range(1, n / 2), h_Av, "r" + marker(i) + "-", markersize=5, linewidth=1)
-            plt.plot(range(MAX - 1 - n + n / 2 + 1, MAX), t_Av, "r" + marker(i) + "-", markersize=5, linewidth=1, label='Average for dim ' + str(n))
+            plt.plot(range(MAX - 1 - n + n / 2 + 1, MAX), t_Av, "r" + marker(i) + "-", markersize=5, linewidth=1, label='Average for n=' + str(n))
             i += 1
         i = 0
         for n in l_n:
@@ -86,12 +86,15 @@ def plot_ht(l_n, l_beta):
                     t_Std += [float(data[1])]
                 cnt += 1
             plt.plot(range(1, n / 2), h_Std, "b" + marker(i + 4) + "-", markersize=5, linewidth=1)
-            plt.plot(range(MAX - 1 - n + n / 2 + 1, MAX), t_Std, "b" + marker(i + 4) + ":", markersize=5, linewidth=1, label='Std for dim ' + str(n))
+            plt.plot(range(MAX - 1 - n + n / 2 + 1, MAX), t_Std, "b" + marker(i + 4) + ":", markersize=5, linewidth=1, label='Std for n=' + str(n))
             i += 1
         plt.legend(loc=1, ncol=2, prop={'size': 16})
         plt.ylim(-0.02, 0.14)
         plt.plot([beta, beta], [0, 0.125], "k--")
         plt.plot([MAX - beta, MAX - beta], [0, 0.125], "k--")
+        plt.xticks([0, 20, 40, 60, 80, 100, 120, 140])
+        ax = fig.add_subplot(1, 1, 1)
+        ax.set_xticklabels([0, 20, 40, 60, "n-60", "n-40", "n-20", "n"])
         plt.savefig("ht_in_bkz_" + str(beta) + '.eps')
         plt.close()
 

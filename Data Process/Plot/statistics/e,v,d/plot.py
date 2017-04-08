@@ -70,10 +70,10 @@ index = 0
 plt.figure(figsize=(8, 5))
 plt.xlabel("$\\beta$", fontsize=18)
 plt.ylabel("$e(\\beta)$", fontsize=18)
-plt.plot(N, E, marker(index), label='BKZ: dim=100')
+plt.plot(N, E, marker(index), label='BKZ: n=100')
 
 for i in range(len(C)):
-    plt.plot(N180[i], E180[i], marker(index), label='BKZ 2.0: dim=180, C=' + str(C[i]))
+    plt.plot(N180[i], E180[i], marker(index), label='BKZ 2.0: n=180, C=' + str(C[i]))
     index += 1
 
 # Gauss = [2 * log(gauss_est(i)) / (i - 1) for i in range(22, 64, 2)]
@@ -88,11 +88,11 @@ index = 0
 plt.figure(figsize=(8, 5))
 plt.xlabel("$\\beta$", fontsize=18)
 plt.ylabel("$v(\\beta$)", fontsize=18)
-plt.plot(N, Var, marker(index), label='BKZ: dim=100')
+plt.plot(N, Var, marker(index), label='BKZ: n=100')
 index += 1
 
 for i in range(len(C)):
-    plt.plot(N180[i], Var180[i], marker(index), label='BKZ 2.0: dim=180, C=' + str(C[i]))
+    plt.plot(N180[i], Var180[i], marker(index), label='BKZ 2.0: n=180, C=' + str(C[i]))
     index += 1
 
 plt.legend(loc='upper right', prop={'size': 15})
@@ -125,11 +125,11 @@ index = 0
 plt.figure(figsize=(8, 5))
 plt.xlabel("$\\beta$", fontsize=18)
 plt.ylabel("$d(\\beta)$", fontsize=18)
-plt.plot(N, D, marker(index), label='BKZ: dim=100')
+plt.plot(N, D, marker(index), label='BKZ: n=100')
 index += 1
 
 for i in range(len(C)):
-    plt.plot(N180[i], D180[i], marker(index), label='BKZ 2.0: dim=180, C=' + str(C[i]))
+    plt.plot(N180[i], D180[i], marker(index), label='BKZ 2.0: n=180, C=' + str(C[i]))
     index += 1
 
 plt.legend(loc='upper right', prop={'size': 10})

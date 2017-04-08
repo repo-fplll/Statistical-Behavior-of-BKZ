@@ -41,7 +41,7 @@ def plot_c(l_n):
             data = line.split()
             N += [int(data[0])]
             C += [float(data[1])]
-        plt.plot(N, C, marker(index) + "-", label='Dim=' + str(n))
+        plt.plot(N, C, marker(index) + "-", label='n=' + str(n))
         index += 1
     plt.legend(loc="lower right", prop={'size': 18})
     plt.savefig("c.eps")
